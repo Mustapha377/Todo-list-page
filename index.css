@@ -135,7 +135,7 @@ body {
 .error-message{
   text-align: center;
   font-size: 14px;
-  font-weight: lighter;
+  font-weight: normal;
   padding-top: 0;
   margin-top: 0;
   padding-bottom: 0;
@@ -201,7 +201,7 @@ input[type="checkbox"]:checked::after {
   .buttons-container {
     position: absolute;
     top:50%;
-    left: -120ppx; /* Start off-screen */
+    left: -120px; /* Start off-screen */
     transform: translateY(-50%);
     display: flex;
     flex-direction: row;
@@ -210,6 +210,7 @@ input[type="checkbox"]:checked::after {
     visibility: hidden;
     transition: left 0.3s ease,
     opacity 0.3s ease, visibility 0.3s ease;
+    margin-left: 30px;
     
   }
   
@@ -227,6 +228,7 @@ input[type="checkbox"]:checked::after {
     border: none;
     cursor: pointer;
     border-radius: 4px;
+    background: none;
   }
 
   .empty-message{
@@ -316,7 +318,12 @@ input[type="checkbox"]:checked::after {
 
   .edit-icon{
     color: #ddd;
-    background-color: #ddd;
+   background: none;
+  }
+
+  .plus-icon{
+    color: white;
+    background-color: white;
   }
 
   .footer-container{
@@ -329,7 +336,7 @@ input[type="checkbox"]:checked::after {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #007bff;
+    background-color: #0c6478;
     color: white;
     border: none;
     border-radius: 50%;

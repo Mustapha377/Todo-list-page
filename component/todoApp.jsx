@@ -133,7 +133,8 @@ const handleEdit = (id, newText) => {
             </div>  
            <div className="footer-container">
              <button onClick={HandleInputClick} 
-              className="floating-button"><img src={Add}>
+              className="floating-button">
+                <img className="plus-icon" src={Add}>
                 </img></button>
            </div>
                

@@ -63,7 +63,7 @@ function Todoitems(props){
             
           />
           <button className="edit-btn" onClick={handleSave}>
-                          <span>Add</span>
+                          <span>edit</span>
                       </button>
         </div>
       ) : (
@@ -83,7 +83,7 @@ function Todoitems(props){
                 <button  className="side-button"
          onClick={() => {
             props.onDeleted(props.id)}}
-            ><img onClick={hideButtons} src={Minus}></img></button>
+            ><img className="edit-icon" onClick={hideButtons} src={Minus}></img></button>
 
             <button  className="side-button"
          onClick={() => {
