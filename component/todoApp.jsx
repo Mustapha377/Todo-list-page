@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import Todoitems from "./items";
 import Add from "../Assets/images/bx-plus.svg";
 import box from "../Assets/images/bx-box.svg";
@@ -15,16 +15,24 @@ const Todoapp = () => {
 // A greeting function based on thr current time 
 
 
-  const getGreeting = () => {
-    const currentHour = new Date().getHours();
-    if (currentHour < 12){
-      return "Good morning";
-    }else if (currentHour < 18){
-      return "Good Afternoon";
-    }else {
-      return "Good Eveening"
-    }
-  }
+ 
+    const [greeting, setgreeting] = useState("");
+     
+    useEffect(() => {
+      const updateGreeting = () => {
+        const currentHour = new Date().getHours();
+      
+        if (currentHour < 12){
+          setgreeting("Good morning");
+        }else if (currentHour < 18){
+          setgreeting("Good Afternoon");
+        }else {
+          setgreeting("Good Eveening");
+        }
+      };
+     updateGreeting();
+    }, [])
+    
 
   // render the current date and month
 
@@ -32,7 +40,6 @@ const Todoapp = () => {
     const now = new Date();
     const options = { day: 'numeric', month: 'short' }; // Format: e.g., 29 Dec
     const formattedDate = now.toLocaleDateString('en-US', options);
-    console.log(formattedDate); // Outputs: e.g., "29 Dec"
     return formattedDate;
   }
   
@@ -84,7 +91,10 @@ const handleEdit = (id, newText) => {
         <div className="home">
             <header className="header">
                 <div className="date">{showCurrentDateAndMonth()}</div>
-                <h1>{getGreeting()} <span>To-Do List</span></h1>
+                <div className="greeting">
+                <h1>To-Do List</h1>
+                <span>{greeting}</span>
+                </div>
                 <div className="avatar">👻</div>
             </header>
 

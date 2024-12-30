@@ -42,15 +42,27 @@ body {
     font-weight: bold;
   }
   
-  h1 {
-    font-size: 16px;
-    margin: 0;
+ .greeting h1 {
+    color: rgb(71, 216, 143);
+    font-weight: bolder;
+    font-size: 28px;
+    
+
   }
   
-  h1 span {
-    color: #2c7;
-    font-weight: bold;
-    font-size: 28px;
+  span {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+  }
+
+  .greeting{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
   }
   
   .avatar {
@@ -77,9 +89,12 @@ body {
 
   .Add-input{
     width: 40%;
+    outline: none;
     border: none;
     border-bottom: dotted 5px teal;
+    font-size: 16px;
   }
+
 
   .Add-btn{
     width: 80px;
@@ -121,11 +136,14 @@ body {
     overflow: hidden;
     text-align: center;
     margin-bottom: 2rem;
+    -webkit-tap-highlight-color: transparent;
+
   }
 
   .task-item{
     list-style: none;
     padding-right: 35px;
+    -webkit-tap-highlight-color: transparent;
   }
 
   .task-item.input-focused{
@@ -264,14 +282,6 @@ input[type="checkbox"]:checked::after {
     color: #2c7;
   }
 
-  .task:hover {
-    background: #f0f0f0;
-  }
-  
-  .task.completed span {
-    text-decoration: line-through;
-    color: #999;
-  }
   
   .task input {
     margin-right: 10px;
@@ -302,9 +312,12 @@ input[type="checkbox"]:checked::after {
 
   .edit-input{
     width: 90px;
+    outline: none;
     border: none;
     border-bottom: dotted 2px #777575;
     background-color: #f0f0f0;
+    padding: 5px;
+    font-size: 16px;
 
   }
 
@@ -323,7 +336,8 @@ input[type="checkbox"]:checked::after {
 
   .plus-icon{
     color: white;
-    background-color: white;
+    background: none;
+    
   }
 
   .footer-container{
@@ -393,6 +407,7 @@ input[type="checkbox"]:checked::after {
       width: 50px;
       height: 50px;
     }
+
   }
 
 
